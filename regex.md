@@ -21,3 +21,24 @@ sr-ease: 230
 
 `cd(ef)*dd`
 - 0 or more (ef) as this is a system.
+
+**`[abc]`**
+  - Matches any one of the characters `a`, `b`, or `c`.
+
+**`\d`**
+
+- Matches any digit (equivalent to `[0-9]`).
+
+**`\w`**
+
+- Matches any word character (letters, digits, and underscores).
+
+
+**`a{2,4}`**
+
+- Matches `a` repeated between 2 and 4 times.
+
+
+**`(abc|def)`**
+
+- Matches either `abc` or `def`.
