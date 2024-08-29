@@ -29,10 +29,15 @@ sr-ease: 230
 
 - Matches any digit (equivalent to `[0-9]`).
 
+
+`\b`
+- this is word boundary
+
 **`\w`**
 
 - Matches any word character (letters, digits, and underscores).
-
+- `\w{3}` -> match exactly 3
+- `\b\w{3}\b` -> word boundary
 
 **`a{2,4}`**
 
@@ -41,4 +46,8 @@ sr-ease: 230
 
 **`(abc|def)`**
 
+`(?i)`
+
+- case insensitive matching
+- `(?i)\b\b`
 - Matches either `abc` or `def`.
