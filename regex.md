@@ -51,3 +51,13 @@ sr-ease: 230
 - case insensitive matching
 - `(?i)\b\b`
 - Matches either `abc` or `def`.
+
+
+//--------------------
+
+use substitution to replace every occurrence of the word i with the word I (uppercase, I as in me). E.g.: i'm replacing it. am i not? -> I'm replacing it. am I not?.
+
+A regex match is replaced with the text in the Substitution field when using substitution.
+
+ -/\b[i]\b/g
+ - g for global replacement
