@@ -6,6 +6,8 @@ sr-ease: 230
 
 #2024-08-22 #recall 
 
+### basic commands 
+
 `a.b`
 - matches for any character
 - except `newline`
@@ -29,15 +31,16 @@ sr-ease: 230
 
 - Matches any digit (equivalent to `[0-9]`).
 
-
 `\b`
-- this is word boundary
+- this is word boundary 
 
 **`\w`**
 
 - Matches any word character (letters, digits, and underscores).
+
 - `\w{3}` -> match exactly 3
 - `\b\w{3}\b` -> word boundary
+
 
 **`a{2,4}`**
 
@@ -46,18 +49,52 @@ sr-ease: 230
 
 **`(abc|def)`**
 
+- Matches either `abc` or `def`.
+
 `(?i)`
 
 - case insensitive matching
 - `(?i)\b\b`
-- Matches either `abc` or `def`.
+
+---
+#2024-09-03
+
+`tree -d -L 1 | grep -oP '(?<=\|-- ).*'`
+``tree -d -L 1 | grep -oP '(?<=\|-- ).*' | sed "s|^|\"$(pwd)/|"``
+
+on this string  .
+
+```sample text 
+
+|-- B2B
+|-- B2B2
+|-- FormsPro
+|-- PDFSimpli.Web
+|-- PDFSimpli.Web.LP
+|-- ServiceBusExplorer
+|-- Signsimpli
+|-- Test-env
+|-- WorkSimpli.Dashboard
+|-- WorkSimpli.DashboardOrch
+|-- WorkSimpli.DocBuilder
+|-- WorkSimpli.DocEditor
+|-- WorkSimpli.DocEditor.API
+|-- WorkSimpli.DocProfile
+|-- WorkSimpli.DocSearchV2
+|-- WorkSimpli.PaymentOrchestration
+|-- WorkSimpli.ResumeBuild.Web
+|-- WorkSimpli.Template.API
+|-- anoteer-pdf.js%20source
+|-- api_body
+|-- formJSONfiles
+|-- legalsimpli
+|-- pdf-editor
+|-- pdf-editor-original
+|-- pdfjs-complete
+|-- sample images
+|-- samplepdfs
+`-- templateCilentBackup
 
 
-//--------------------
 
-use substitution to replace every occurrence of the word i with the word I (uppercase, I as in me). E.g.: i'm replacing it. am i not? -> I'm replacing it. am I not?.
-
-A regex match is replaced with the text in the Substitution field when using substitution.
-
- -/\b[i]\b/g
- - g for global replacement
+```
