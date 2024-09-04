@@ -105,3 +105,8 @@ on this string  .
 **Example:** the regex `/./g` will return **3** when run against the string `abc`.
 
 `/[BCDFGHJKLMNPQRSTVWXYZ]/g
+
+
+### Count the number of integers in a given string. Integers are, for example: `1, 2, 65, 2579`, etc.
+
+`/\d+/g`
