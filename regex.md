@@ -58,6 +58,7 @@ sr-ease: 230
 
 ---
 #2024-09-03
+### Daily Use records.
 
 `tree -d -L 1 | grep -oP '(?<=\|-- ).*'`
 ``tree -d -L 1 | grep -oP '(?<=\|-- ).*' | sed "s|^|\"$(pwd)/|"``
@@ -98,3 +99,9 @@ on this string  .
 
 
 ```
+
+### With regex you can _count_ the number of matches. Can you make it return the number of uppercase consonants (B,C,D,F,..,X,Y,Z) in a given string? E.g.: it should return `3` with the text `ABcDeFO!`. **Note:** Only ASCII. We consider `Y` to be a consonant!
+
+**Example:** the regex `/./g` will return **3** when run against the string `abc`.
+
+`/[BCDFGHJKLMNPQRSTVWXYZ]/g
