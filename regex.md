@@ -110,3 +110,7 @@ on this string  .
 ### Count the number of integers in a given string. Integers are, for example: `1, 2, 65, 2579`, etc.
 
 `/\d+/g`
+
+### Find all occurrences of **4 or more** whitespace characters in a row throughout the string.
+
+`\s{4,}`
